@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/listviewCagegory"
+    android:nestedScrollingEnabled="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myapp.groceryshopcustomer.Activity.ShopCategoriesActivity"
+    tools:showIn="@layout/activity_shop_categories">
+
+        <!--<ListView-->
+            <!--android:id="@+id/listviewCagegory"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:nestedScrollingEnabled="true"-->
+            <!--android:cacheColorHint="#00000000" />-->
+
+</ListView>

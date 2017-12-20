@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myapp.groceryshopcustomer">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/gtracker_icon"
+        android:label="Grocery Customer"
+        android:roundIcon="@drawable/gtracker_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.myapp.groceryshopcustomer.Activity.GetLocationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Firebase Notifications -->
+        <service android:name="com.myapp.groceryshopcustomer.Service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.myapp.groceryshopcustomer.Service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAchXvpKwaH4LGGuMJUIjxli2WK17Aie6o" />
+
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.CityActivity"
+            android:label="Select City"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.GetLocationActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.AreaActivity"
+            android:label="Select Area"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.GetLocationActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.ShopCategoriesActivity"
+            android:label="@string/title_activity_shop_categories"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.ProductListActivity"
+            android:label="Products"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.ShopCategoriesActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.ProductDetailsActivity"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.MainActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.CartActivity"
+            android:label="My Cart"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.ProductListActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.DeliveryOptionActivity"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.CartActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.RegisterActivity"
+            android:label="Checkout"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.DeliveryOptionActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.ChooseDeliveryAddActivity"
+            android:label="Select Address"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.DeliveryOptionActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.GetDeliveryAddressActivity"
+            android:label="Delivery Address"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.ChooseDeliveryAddActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.PlaceOrderActivity"
+            android:label="Order Now"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.ChooseDeliveryAddActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.MyOrdersActivity"
+            android:label="Your Orders"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.MainActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.CompareActivity"
+            android:label=""
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.CartActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.ShopListToCompActivity"
+            android:label="Select Shop"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.CartActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.MyOrdersDetailsActivity"
+            android:label="Order Details"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.MyOrdersActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.EditAddressActivity"
+            android:label="Edit Address"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.ChooseDeliveryAddActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.ProfileActivity"
+            android:label="Profile"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.MainActivity"></activity>
+
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.SubmitOTPActivity"
+            android:label="Submit OTP"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.GetLocationActivity" />
+        <activity
+            android:name="com.myapp.groceryshopcustomer.Activity.ChangePasswordActivity"
+            android:label="Change Password"
+            android:parentActivityName="com.myapp.groceryshopcustomer.Activity.GetLocationActivity"></activity>
+    </application>
+
+</manifest>

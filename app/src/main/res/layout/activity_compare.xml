@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--app:layout_behavior="@string/appbar_scrolling_view_behavior"--><!--tools:context="com.sveltoz.groceryshopcustomer.Activity.MainActivity"--><!--tools:showIn="@layout/app_bar_main">--><!--<ListView--><!--android:id="@+id/lst_cart_items"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">--><!--</ListView>-->
+
+<!--</RelativeLayout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/orderDetailsswipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:text="Shop 1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:text="Items : 5"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_total_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Ammount : 100 ₹"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_shop_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:text="Shop 2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_items1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Items : 5"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_total_amt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Ammount : 100 ₹"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lst_cart_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="Skip"
+
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_switch_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            android:text="Switch Order" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

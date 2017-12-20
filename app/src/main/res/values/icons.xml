@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="fa_icon_goahed">&#xf054;</string>
+    <string name="fa_icon_piechart">&#xf200;</string>
+    <string name="fa_icon_linechart">&#xf201;</string>
+    <string name="fa_icon_mapcurrentloc">&#xf192;</string>
+    <string name="fa_icon_edit">&#xf044;</string>
+     <string name="fa_map_marker">&#xf041;</string>
+     <string name="fa_cart_cart">&#xf217;</string>
+     <string name="fa_search">&#xf002;</string>
+    <string name="fa_filter">&#xf0b0;</string>
+    <string name="fa_eye">&#xf06e;</string>
+    <string name="fa_eye_slash">&#xf070;</string>
+    <string name="fa_next">&#x0260E;</string>
+
+    <string name="fa_delete">&#xf1f8;</string>
+</resources>

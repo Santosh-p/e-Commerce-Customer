@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+
+            android:id="@+id/img_productimage"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:layout_weight="3"
+            android:background="@drawable/imageborder" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Product name"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"  />
+
+
+            <TextView
+                android:id="@+id/tv_product_manufacturar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Manufacturar"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Category"
+                android:textSize="12dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:id="@+id/tv_mrp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingRight="10dp"
+                    android:text="MRP"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingRight="10dp"
+                    android:text="Price"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+                <!--<Button-->
+                <!--android:id="@+id/btn_addtocart"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="5"-->
+                <!--android:text="ADD TO CART"-->
+                <!--android:padding="2dp"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:focusable="false"-->
+                <!--android:focusableInTouchMode="false"/>-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right"
+                android:text="Save"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvGoAhed1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:text="@string/fa_icon_goahed" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:onClick="AddMultipleProduct"
+            android:text="Quantity" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_addtocart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="AddSingleProduct"
+                android:text="Add"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:id="@+id/ll_qty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="right"
+                android:visibility="gone"
+                android:weightSum="10">
+
+                <Button
+                    android:id="@+id/btn_decrease"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_background"
+                    android:onClick="decreaseSingleItem"
+                    android:text="-"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_quantityy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/btn_increase"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/button_background"
+                    android:onClick="increaseSingleItem"
+                    android:text="+"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

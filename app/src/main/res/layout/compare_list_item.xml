@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/img_productimage"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="3"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Product name"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_product_manufacturar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Manufacturar"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Category"
+                    android:textSize="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:weightSum="10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10"
+                        android:layout_weight="5">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="5"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:text="Unit" />
+
+                        <TextView
+                            android:id="@+id/tv_unit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="5"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:text="unit" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_qty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:visibility="visible"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="5"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:text="Quantity" />
+                        <TextView
+                            android:id="@+id/tv_quantity1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:text="0" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Price"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Price"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Total Price"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Price"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Price"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_price1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Price"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Total Price"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_total_price1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Price"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="10">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:weightSum="10">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:text="Price"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_price"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:text="Price"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+      <!---->
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:weightSum="10">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:text="Price"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_price1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:text="Price"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="10">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:weightSum="10">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:text="Total Price"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_total_price"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:text="Price"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:weightSum="10">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:text="Total Price"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_total_price1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:text="Price"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+</LinearLayout>
